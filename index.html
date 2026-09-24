@@ -1,42 +1,51 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Android TV Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android TV Settings Test</title>
 
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 40px;
-    }
-
-    a {
-      display: block;
-      font-size: 24px;
-      padding: 20px;
-      margin: 20px 0;
-      border: 2px solid #333;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-  </style>
+<style>
+body {
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    padding: 40px;
+}
+a {
+    display: block;
+    background: #333;
+    color: white;
+    font-size: 25px;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 12px;
+    text-decoration: none;
+}
+a:focus {
+    outline: 5px solid white;
+}
+</style>
 </head>
 
 <body>
 
 <h1>Android TV Settings Test</h1>
 
-<a href="intent:#Intent;action=android.settings.SETTINGS;end">
-  기본 설정 열기
+<a href="intent:#Intent;action=android.settings.SETTINGS;package=com.android.tv.settings;end">
+TV 설정 열기
 </a>
 
-<a href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end">
-  Wi-Fi 설정 열기
+<a href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;package=com.android.tv.settings;end">
+TV 앱 설정
 </a>
 
-<a href="intent:#Intent;action=android.settings.BLUETOOTH_SETTINGS;end">
-  Bluetooth 설정 열기
+<a href="intent:#Intent;action=android.settings.WIFI_SETTINGS;package=com.android.tv.settings;end">
+TV 네트워크 설정
+</a>
+
+<a href="intent:#Intent;action=android.settings.BLUETOOTH_SETTINGS;package=com.android.tv.settings;end">
+TV 블루투스 설정
 </a>
 
 </body>
