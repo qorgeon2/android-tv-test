@@ -4,10 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Android TV Test</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+    }
+
+    a {
+      display: block;
+      font-size: 24px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 2px solid #333;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Android TV Test</h1>
-  <p>페이지가 정상적으로 열렸습니다.</p>
+
+<h1>Android TV Settings Test</h1>
+
+<a href="intent:#Intent;action=android.settings.SETTINGS;end">
+  기본 설정 열기
+</a>
+
+<a href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end">
+  Wi-Fi 설정 열기
+</a>
+
+<a href="intent:#Intent;action=android.settings.BLUETOOTH_SETTINGS;end">
+  Bluetooth 설정 열기
+</a>
+
 </body>
 </html>
